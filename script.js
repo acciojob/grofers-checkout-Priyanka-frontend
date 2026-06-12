@@ -8,14 +8,15 @@ const prices = document.querySelectorAll(".prices");
   let total = 0;
 
   prices.forEach((price) => {
-    total += Number(price.textContent);
+    total += Number(price.innerText);
   });
 
   const tr = document.createElement("tr");
   const td = document.createElement("td");
 
-  td.textContent = total;
-  td.colSpan = 2; // optional, makes the total cell span columns
+  td.id = "ans";
+  td.colSpan = "2";
+  td.innerText = total;
 
   tr.appendChild(td);
 
